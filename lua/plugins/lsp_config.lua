@@ -7,10 +7,13 @@ return {
       },
       servers = {
         lua_ls = {
-          Lua = {
-            hint = { enable = true },
+          settings = {
+            Lua = {
+              hint = { enable = true },
+            },
           },
         },
+        zls = {},
         tsserver = {
           settings = {
             typescript = {
