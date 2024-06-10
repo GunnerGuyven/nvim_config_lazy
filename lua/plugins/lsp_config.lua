@@ -2,9 +2,9 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = {
-        enabled = true,
-      },
+      --  codelens = { enabled = true },
+      inlay_hints = { enabled = true },
+      update_in_insert = true,
       servers = {
         lua_ls = {
           settings = {
@@ -14,6 +14,8 @@ return {
           },
         },
         zls = {},
+        -- ols = {},
+        phpactor = {},
         tsserver = {
           settings = {
             typescript = {
@@ -42,6 +44,14 @@ return {
             },
           },
         },
+      },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "php",
       },
     },
   },
