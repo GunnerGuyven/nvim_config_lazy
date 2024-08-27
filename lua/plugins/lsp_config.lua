@@ -13,9 +13,11 @@ return {
             },
           },
         },
+        clangd = {},
         zls = {},
-        -- ols = {},
-        phpactor = {},
+        ols = {},
+        lemminx = {},
+        -- phpactor = {},
         tsserver = {
           settings = {
             typescript = {
@@ -51,7 +53,19 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "php",
+        "cpp",
+        "odin",
+      },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      -- log_level = vim.log.levels.DEBUG,
+      formatters = {
+        php_cs_fixer = {
+          cwd = require("conform.util").root_file({ ".php-cs-fixer.dist.php" }),
+        },
       },
     },
   },
