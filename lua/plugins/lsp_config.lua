@@ -18,6 +18,20 @@ return {
         ols = {},
         lemminx = {},
         -- phpactor = {},
+        denols = {},
+        tailwindcss = {
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  "[cC]lass\\w*\\s*(?:=|:)\\s*`([^`]*)`",
+                  "[cC]lass\\w*\\s*(?:=|:)\\s*'([^']*)'",
+                  '[cC]lass\\w*\\s*(?:=|:)\\s*"([^"]*)"',
+                },
+              },
+            },
+          },
+        },
         tsserver = {
           settings = {
             typescript = {
