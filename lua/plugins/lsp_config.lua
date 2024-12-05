@@ -18,7 +18,36 @@ return {
         ols = {},
         lemminx = {},
         -- phpactor = {},
-        denols = {},
+        denols = {
+          settings = {
+            typescript = {
+              inlayHints = {
+                enumMemberValues = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = true },
+                parameterTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                -- variableTypes = {
+                --   enabled = true,
+                --   suppressWhenTypeMatchesName = true,
+                -- },
+              },
+            },
+            javascript = {
+              inlayHints = {
+                enumMemberValues = { enabled = true },
+                functionLikeReturnTypes = { enabled = true },
+                parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = true },
+                parameterTypes = { enabled = true },
+                propertyDeclarationTypes = { enabled = true },
+                variableTypes = {
+                  enabled = true,
+                  suppressWhenTypeMatchesName = true,
+                },
+              },
+            },
+          },
+        },
         tailwindcss = {
           settings = {
             tailwindCSS = {
