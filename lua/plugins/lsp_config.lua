@@ -112,4 +112,18 @@ return {
       },
     },
   },
+  {
+    "folke/snacks.nvim",
+    ---@type snacks.Config
+    opts = {
+      scope = {
+        cursor = false,
+      },
+      -- indent = {
+      --   scope = {
+      --     underline = true,
+      --   },
+      -- },
+    },
+  },
 }
