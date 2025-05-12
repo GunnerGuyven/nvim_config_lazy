@@ -108,6 +108,9 @@ return {
       formatters = {
         php_cs_fixer = {
           cwd = require("conform.util").root_file({ ".php-cs-fixer.dist.php" }),
+          env = {
+            PHP_CS_FIXER_IGNORE_ENV = 1,
+          },
         },
       },
     },
