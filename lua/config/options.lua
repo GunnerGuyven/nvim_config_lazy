@@ -6,3 +6,5 @@ vim.opt.listchars = "tab:  ⇀,space:·"
 vim.opt.expandtab = false
 
 -- vim.g.lazyvim_php_lsp = "intelephense"
+
+vim.opt.mousescroll = "ver:2,hor:4"

@@ -115,18 +115,22 @@ return {
       },
     },
   },
-  {
-    "folke/snacks.nvim",
-    ---@type snacks.Config
-    opts = {
-      scope = {
-        cursor = false,
-      },
-      -- indent = {
-      --   scope = {
-      --     underline = true,
-      --   },
-      -- },
-    },
-  },
+  -- {
+  --   "folke/snacks.nvim",
+  --   ---@type snacks.Config
+  --   opts = {
+  --     scope = {
+  --       cursor = false,
+  --     },
+  --     -- indent = {
+  --     --   scope = {
+  --     --     underline = true,
+  --     --   },
+  --     -- },
+  --   },
+  -- },
+  -- {
+  --   "linux-cultist/venv-selector.nvim",
+  --   enabled = true,
+  -- },
 }
