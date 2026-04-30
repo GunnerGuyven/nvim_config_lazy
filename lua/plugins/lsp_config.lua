@@ -1,6 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
+    -- commit = "b34fbdf",
     opts = {
       --  codelens = { enabled = true },
       inlay_hints = { enabled = true },
@@ -13,10 +14,10 @@ return {
             },
           },
         },
-        clangd = {},
-        zls = {},
-        ols = {},
-        lemminx = {},
+        -- clangd = {},
+        -- zls = {},
+        -- ols = {},
+        -- lemminx = {},
         -- phpactor = {},
         denols = {
           settings = {
@@ -27,10 +28,7 @@ return {
                 parameterNames = { enabled = "all", suppressWhenArgumentMatchesName = true },
                 parameterTypes = { enabled = true },
                 propertyDeclarationTypes = { enabled = true },
-                -- variableTypes = {
-                --   enabled = true,
-                --   suppressWhenTypeMatchesName = true,
-                -- },
+                variableTypes = { enabled = true, suppressWhenTypeMatchesName = true },
               },
             },
             javascript = {
@@ -61,7 +59,7 @@ return {
             },
           },
         },
-        tsserver = {
+        vtsls = {
           settings = {
             typescript = {
               inlayHints = {
@@ -106,6 +104,7 @@ return {
     opts = {
       -- log_level = vim.log.levels.DEBUG,
       formatters = {
+        sqlfluff = { args = { "fix", "--FIX-EVEN-UNPARSABLE", "--nocolor", "-" }, stdin = true },
         php_cs_fixer = {
           cwd = require("conform.util").root_file({ ".php-cs-fixer.dist.php" }),
           env = {
@@ -114,6 +113,9 @@ return {
         },
       },
     },
+  },
+  {
+    "chrisgrieser/nvim-lsp-endhints",
   },
   -- {
   --   "folke/snacks.nvim",
