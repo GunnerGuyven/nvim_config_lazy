@@ -104,7 +104,11 @@ return {
     opts = {
       -- log_level = vim.log.levels.DEBUG,
       formatters = {
-        sqlfluff = { args = { "fix", "--FIX-EVEN-UNPARSABLE", "--nocolor", "-" }, stdin = true },
+        sqlfluff = {
+          args = { "fix", "--FIX-EVEN-UNPARSABLE", "--nocolor", "-" },
+          stdin = true,
+          exit_codes = { 0, 1 },
+        },
         php_cs_fixer = {
           cwd = require("conform.util").root_file({ ".php-cs-fixer.dist.php" }),
           env = {
