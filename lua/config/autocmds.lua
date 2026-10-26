@@ -18,3 +18,11 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.softtabstop = 2
   end,
 })
+
+-- disable nufmt on save by default
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "nu",
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})

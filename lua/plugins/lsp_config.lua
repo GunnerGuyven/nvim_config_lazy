@@ -19,6 +19,11 @@ return {
         -- ols = {},
         -- lemminx = {},
         -- phpactor = {},
+        -- nushell = {
+        --   -- cmd = { "/home/guyven/work/github/nushell/target/debug/nu", "--lsp" },
+        --   -- cmd_env = { RUST_BACKTRACE = "full" },
+        --   cmd = { "/home/guyven/work/github/nushell/target/release/nu", "--lsp" },
+        -- },
         denols = {
           settings = {
             typescript = {
@@ -103,6 +108,9 @@ return {
     "stevearc/conform.nvim",
     opts = {
       -- log_level = vim.log.levels.DEBUG,
+      formatters_by_ft = {
+        nu = { "nufmt" },
+      },
       formatters = {
         sqlfluff = {
           args = { "fix", "--FIX-EVEN-UNPARSABLE", "--nocolor", "-" },

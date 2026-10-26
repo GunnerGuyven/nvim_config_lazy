@@ -1,4 +1,4 @@
-local config_path = vim.fn.stdpath("config") .. "/markdownlint.json"
+local config_path = vim.fn.stdpath("config") .. "/markdownlint.jsonc"
 
 return {
   {
